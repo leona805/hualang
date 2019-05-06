@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>画廊</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/1.js"></script>
+    <script type="text/javascript" src="photo/data.js"></script>
+</head>
+<body onselectstart="return false;">
+    <!-- 2改写视图，为模板字符串 -->
+    <div class="wrap" id="wrap">
+
+        <!--photo负责平移和旋转-->
+        <div class="photo photo-front" onclick="turn(this)" id="photo-{{index}}">
+            
+            <!--photo-wrap负责翻转-->
+            <div class="photo-wrap">
+                <div class="side side-front">
+                    <p class="image">
+                        <img src="photo/{{img}}">
+                    </p>
+                    <p class="caption">
+                        {{caption}}
+                    </p>
+                </div>
+                <div class="side side-back">
+                    <p class="desc">
+                        {{desc}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
